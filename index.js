@@ -11,7 +11,7 @@ module.exports = plugin(function ({ addVariant, e, postcss }) {
     mediaQuery.append(container.nodes);
     container.append(mediaQuery);
     mediaQuery.walkRules(rule => {
-      rule.selector = `.${e(`retina${separator}${rule.selector.slice(1)}`)}`;
+      rule.selector = `.${e(`scaled${separator}${rule.selector.slice(1)}`)}`;
     });
   });
 });
