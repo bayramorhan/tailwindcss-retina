@@ -1,7 +1,7 @@
 const plugin = require('tailwindcss/plugin');
 
 module.exports = plugin(function ({ addVariant, e, postcss }) {
-  addVariant('retina', ({ container, separator }) => {
+  addVariant('scaled', ({ container, separator }) => {
     const mediaQuery = postcss.atRule({
       name: 'media',
       params: [
