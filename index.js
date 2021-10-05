@@ -5,8 +5,7 @@ module.exports = plugin(function ({ addVariant, e, postcss }) {
     const mediaQuery = postcss.atRule({
       name: 'media',
       params: [
-        '(-webkit-min-device-pixel-ratio: 2)',
-        '(min-resolution: 192dpi)',
+        '(-webkit-min-device-pixel-ratio: 1.25)',
       ].join(),
     });
     mediaQuery.append(container.nodes);
